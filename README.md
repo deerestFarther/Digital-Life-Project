@@ -3,6 +3,9 @@
 ## Introduction
 The Digital Life Project is an innovative endeavor that utilizes cutting-edge technologies in computer vision (CV) to build a digital version of oneself. This project aims to bridge the gap between the physical and digital worlds, offering a unique and personal digital experience.
 
+## Demo
+The documentations are under revision, you can try the demo at [Digital-Life-Project](http://www.pandub.cn:50954)
+
 ## Features
 ### Developed Features
 1. **Face Swap:** Advanced computer vision technology enabling users to swap faces in images or videos, creating a more personalized digital avatar.
