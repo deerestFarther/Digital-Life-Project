@@ -16,9 +16,12 @@ The documentations are under revision, you can try the demo at [Digital-Life-Pro
 ### Features in Development
 1. **Sound Cloning by Sovits:** A future enhancement to clone a user's voice using Sovits technology, providing a more authentic and personalized audio experience for the digital avatar.
 
+2. **LLM-based chatting experience:** A future enhancement to chat with a user's voice using Sovits technology, providing a more authentic and personalized chatting experience for the digital avatar.
+
 ## Getting Started
 To get started with the Digital Life Project, follow these steps:
 1. **Installation:**
+- Basic Installation:
     ```
     # Clone the repository
     git clone https://github.com/deerestFarther/Digital-Life-Project.git
@@ -33,6 +36,16 @@ To get started with the Digital Life Project, follow these steps:
     # Install dependencies
     python -m pip install --no-cache-dir -r requirements.txt
     ```
+- For Nvidia GPU user, you may need to reinstall torch by:
+    ```
+    conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia --force-reinstall
+    ```
+    This command on works on cuda-11.8 and within conda environment. For more installation command, please check out [PyTorch.org](https://pytorch.org/get-started/locally/)
+
+- For M-series MacOS user, you may need to install [pytorch-nightly](https://developer.apple.com/metal/pytorch/) to use torch on M-SoC MacOS by:
+    ```
+    conda install pytorch torchvision torchaudio -c pytorch-nightly
+    ```
 2. **Usage:**
     <!-- - Instructions on how to use the application.
     - Example commands and expected outputs. -->
@@ -42,22 +55,29 @@ To get started with the Digital Life Project, follow these steps:
     ```
 
 ## Requirements
-- List of hardware and software requirements.
-- Specific CV technologies or libraries needed.
+<!-- - List of hardware and software requirements.
+- Specific CV technologies or libraries needed. -->
+- On Win10 with one Nvidia RTX 4090, it requires at least 6G VRAM to use the features mentioned above 
 
-## Documentation
+<!-- ## Documentation
 - Link to the project documentation.
-- Description of the API (if applicable).
+- Description of the API (if applicable). -->
 
 ## Contributing
-We welcome contributions to the Digital Life Project! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to contribute.
+We welcome contributions to the Digital Life Project! 
+<!-- Please read our [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to contribute. -->
 
 ## License
 This project is licensed under the [MIT License] - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
-- Mention any collaborators, third-party libraries, or technologies used.
-- Credits to anyone whose code was used.
+### Technologies used in this project:
+- [deepinsight / insightface](https://github.com/deepinsight/insightface)
+- [OpenTalker / video-retalking](https://github.com/OpenTalker/video-retalking)
+- [coqui-ai / TTS](https://github.com/coqui-ai/TTS)
+<!-- - Mention any collaborators, third-party libraries, or technologies used. -->
+### Contributors:
+<!-- - Credits to anyone whose code was used. -->
 
 ## Contact
 - Contact information for the project maintainers.

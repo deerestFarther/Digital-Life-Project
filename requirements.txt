@@ -39,9 +39,6 @@ soundfile==0.12.1
 stasm==2.0.2
 tensorflow==2.15.0.post1
 timm==0.9.10
-torch==2.1.1
-torchvision==0.14.1+cu116
-torchvision==0.16.1
 tqdm==4.66.1
 transformers==4.35.0
 trimesh==4.0.5
