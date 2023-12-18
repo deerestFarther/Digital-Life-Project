@@ -8,10 +8,12 @@ The documentations are under revision, you can try the demo at [Digital-Life-Pro
 
 ## Features
 ### Developed Features
-1. **Face Swap:** Advanced computer vision technology enabling users to swap faces in images or videos, creating a more personalized digital avatar.
-2. **Video Retalking:** Upcoming feature to manipulate video content so that the digital avatar can mimic user speech, enhancing realism and personalization.
-3. **Text-to-Speech (TTS):** Converts user-input text into natural-sounding speech, enhancing the interactivity of the digital avatar.
-4. **Background Music (BGM) Separation:** Sophisticated audio processing technology to separate background music from vocals, allowing for clear and distinct audio outputs.
+- **Face Manipulation**
+    1. **Face Swap:** Advanced computer vision technology enabling users to swap faces in images or videos, creating a more personalized digital avatar.
+    2. **Video Retalking:** Upcoming feature to manipulate video content so that the digital avatar can mimic user speech, enhancing realism and personalization.
+- **Audio Manipulation**
+    1. **Text-to-Speech (TTS):** Converts user-input text into natural-sounding speech, enhancing the interactivity of the digital avatar.
+    2. **Background Music (BGM) Separation:** Sophisticated audio processing technology to separate background music from vocals, allowing for clear and distinct audio outputs.
 
 ### Features in Development
 1. **Sound Cloning by Sovits:** A future enhancement to clone a user's voice using Sovits technology, providing a more authentic and personalized audio experience for the digital avatar.
