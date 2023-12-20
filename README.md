@@ -86,5 +86,7 @@ This project is licensed under the [MIT License] - see the [LICENSE](LICENSE) fi
 
 ## FAQ
 - Answers to common questions about the project.
+- Triton安装问题：https://github.com/XPixelGroup/DiffBIR/issues/24
+ 
     <!-- - diffbir依赖triton安装问题：https://github.com/XPixelGroup/DiffBIR/issues/24
     - diffbir依赖：https://github.com/XPixelGroup/DiffBIR -->
