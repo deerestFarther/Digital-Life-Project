@@ -71,3 +71,5 @@ class SoundSeparator:
 class SoundInference:
     def infer_sound(self):
         return
+    def run_inference(self):
+        return

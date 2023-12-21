@@ -5,7 +5,6 @@ from sound.sound import SoundSeparator, SoundInference
 from face.swap_faces import FaceSwapper
 from face.vtalk import VideoRetalker
 from sound.tts import CoquiTTS
-# from face.diffbir import ImageProcessor
 
 # Define the list of supported languages (you may need to adjust this list based on the model's capabilities)
 supported_languages = ["en", "zh", "de", "fr"]  # Add other languages as supported by the model
@@ -100,7 +99,42 @@ with block:
                
         with gr.Tab(label="Inferencing"):
             sound_inference = SoundInference()
-            run_button.click(fn=sound_inference.infer_sound, inputs=[], outputs=[])
+            with gr.Row():
+                with gr.Column():
+                    source_audio = gr.Audio(label="Original Audio")
+                    run_inference_button = gr.Button("Run Sound Cloning")
+                    with gr.Accordion("Settings", open=False):
+                        use_gpu = gr.Checkbox(label="Use GPU", value=False)
+                        silence_threshold = gr.Slider(minimum=-100, maximum=0, value=-35, step=1, label="Silence threshold")
+                        pitch = gr.Slider(minimum=-36, maximum=36, value=12, step=1, label="Pitch (12 = 1 octave)")
+                        auto_predict_f0 = gr.Checkbox(label="Auto predict F0", value=True)
+                        noise_scale = gr.Slider(minimum=0.0, maximum=1.0, value=0.4, step=0.01, label="Noise scale")
+                        chunk_seconds = gr.Slider(minimum=0.1, maximum=5.0, value=0.5, step=0.1, label="Chunk seconds")
+                        pad_seconds = gr.Slider(minimum=0.0, maximum=1.0, value=0.1, step=0.01, label="Pad seconds")
+                        f0_prediction_method = gr.Dropdown(label="F0 prediction method", choices=["dio", "other_method_1", "other_method_2"])
+                with gr.Column():
+                    result_audio = gr.Audio(label="Cloned Vocals")
+                # with gr.Accordion("Paths", open=False):
+                #     model_path = gr.Textbox(label="Model path")
+                #     config_path = gr.File(label="Config path (.json)", type="file", file_count="single", accept=".json")
+                #     cluster_model_path = gr.Textbox(label="Cluster model path (Optional)")
+            run_inference_button.click(
+                fn=sound_inference.run_inference, 
+                inputs=[
+                    # model_path, 
+                    # config_path, 
+                    # cluster_model_path, 
+                    silence_threshold, 
+                    pitch, 
+                    noise_scale, 
+                    chunk_seconds, 
+                    pad_seconds, 
+                    f0_prediction_method, 
+                    use_gpu, 
+                    auto_predict_f0
+                ], 
+                outputs=[]
+            )
 
 if __name__ == "__main__":
     block.launch(server_port=50954)
