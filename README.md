@@ -60,7 +60,7 @@ To get started with the Digital Life Project, follow these steps:
 <!-- - List of hardware and software requirements.
 - Specific CV technologies or libraries needed. -->
 - On Win10 with one Nvidia RTX 4090, it requires at least 6G VRAM to use the features mentioned above 
-
+- Still testing on MacOS and cpu-win system
 <!-- ## Documentation
 - Link to the project documentation.
 - Description of the API (if applicable). -->
